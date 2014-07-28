@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mickw</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="launch_exercise">Launch</string>
+    <string name="title_orderitem_list">OrderItems</string>
+    <string name="title_orderitem_detail">OrderItem Detail</string>
+
+</resources>
