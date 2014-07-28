@@ -11,7 +11,7 @@
     tools:context="com.mickw.mickw.OrderItemListActivity">
 
     <!--
-    This layout is a two-pane layout for the OrderItems
+    This layout is a two-pane layout for the OfferItems
     master/detail flow. See res/values-large/refs.xml and
     res/values-sw600dp/refs.xml for an example of layout aliases
     that replace the single-pane version of the layout with

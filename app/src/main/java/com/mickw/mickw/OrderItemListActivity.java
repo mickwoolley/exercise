@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.app.Activity;
 
 import android.view.MenuItem;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.mickw.mickw.R;
+import com.mickw.mickw.datadomain.OfferItems;
 
 /**
- * An activity representing a list of OrderItems. This activity
+ * An activity representing a list of OfferItems. This activity
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
  * lead to a {@link OrderItemDetailActivity} representing
@@ -37,6 +41,11 @@ public class OrderItemListActivity extends Activity
         super.onCreate(savedInstanceState);
 
         String json = getIntent().getExtras().getString(StartActivity.JSON);
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("dd/MM/yyyy").create();
+        OfferItems offerItems = gson.fromJson(json, OfferItems.class);
+
 
         setContentView(R.layout.activity_orderitem_list);
         // Show the Up button in the action bar.
