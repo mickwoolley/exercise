@@ -12,9 +12,40 @@ import java.util.ArrayList;
  */
 public class OfferItems {
 
-    int page;
-    int page_size;
-    int total_count;
-    ArrayList<OfferItem> offers = new ArrayList<OfferItem>();
+    private int page;
+    private int page_size;
+    private int total_count;
+    private ArrayList<OfferItem> offers = new ArrayList<OfferItem>();
 
+    public int getPage() {
+        return page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public int getPage_size() {
+        return page_size;
+    }
+
+    public void setPage_size(int page_size) {
+        this.page_size = page_size;
+    }
+
+    public int getTotal_count() {
+        return total_count;
+    }
+
+    public void setTotal_count(int total_count) {
+        this.total_count = total_count;
+    }
+
+    public ArrayList<OfferItem> getOffers() {
+        return offers;
+    }
+
+    public void setOffers(ArrayList<OfferItem> offers) {
+        this.offers = offers;
+    }
 }

@@ -9,7 +9,9 @@ import android.view.MenuItem;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mickw.mickw.R;
+import com.mickw.mickw.datadomain.OfferItem;
 import com.mickw.mickw.datadomain.OfferItems;
+import com.mickw.mickw.dummy.DummyContent;
 
 /**
  * An activity representing a list of OfferItems. This activity
@@ -46,6 +48,7 @@ public class OrderItemListActivity extends Activity
                 .setDateFormat("dd/MM/yyyy").create();
         OfferItems offerItems = gson.fromJson(json, OfferItems.class);
 
+        assignDummyItemsFromOfferItems(offerItems);
 
         setContentView(R.layout.activity_orderitem_list);
         // Show the Up button in the action bar.
@@ -66,6 +69,13 @@ public class OrderItemListActivity extends Activity
         }
 
         // TODO: If exposing deep links into your app, handle intents here.
+    }
+
+    private void assignDummyItemsFromOfferItems(OfferItems offerItems) {
+        DummyContent.init();
+        for (OfferItem item : offerItems.getOffers()) {
+            DummyContent.addItem(item);
+        }
     }
 
     @Override
