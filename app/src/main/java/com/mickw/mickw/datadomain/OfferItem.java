@@ -1,26 +1,30 @@
 package com.mickw.mickw.datadomain;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
 /**
  * Created by mick on 28/07/2014.
  */
 public class OfferItem {
-    private int available_count; // would like to change names to more Java like - check GSON mapping possibilities
+    @SerializedName("available_count")
+    private int availableCount;
     private String description;
     private String discount;
-    private Date end_date;
+    @SerializedName("end_date")
+    private Date endDate;
     private String image;
     private String price;
     private String title;
     private String uuid;
 
-    public int getAvailable_count() {
-        return available_count;
+    public int getAvailableCount() {
+        return availableCount;
     }
 
-    public void setAvailable_count(int available_count) {
-        this.available_count = available_count;
+    public void setAvailableCount(int availableCount) {
+        this.availableCount = availableCount;
     }
 
     public String getDescription() {
@@ -39,12 +43,12 @@ public class OfferItem {
         this.discount = discount;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public String getImage() {

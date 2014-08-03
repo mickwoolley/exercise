@@ -32,6 +32,8 @@ import com.mickw.mickw.dummy.DummyContent;
 public class OrderItemListActivity extends Activity
         implements OrderItemListFragment.Callbacks {
 
+    // OOPS naming silly - should have entered OfferItem when creating using AS, need to correct later
+
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.

@@ -8,4 +8,11 @@
     <string name="title_orderitem_list">OrderItems</string>
     <string name="title_orderitem_detail">OrderItem Detail</string>
 
+    <string name="offers_list_remaining">Just 4 to go?</string>
+    <string name="offers_list_validity">until the end of time</string>
+    <string name="offers_list_description">it\'s a thing</string>
+    <string name="offers_list_title">the title</string>
+
+
+
 </resources>

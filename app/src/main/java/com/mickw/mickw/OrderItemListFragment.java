@@ -68,16 +68,13 @@ public class OrderItemListFragment extends ListFragment {
     public OrderItemListFragment() {
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<OfferItem>(
-                getActivity(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                DummyContent.ITEMS));
+        // still hacking data access via Dummy, should get data in the fragment?
+        OfferItemListAdapter adapter = new OfferItemListAdapter(getActivity().getBaseContext(), R.layout.offers_list, DummyContent.ITEMS);
+        setListAdapter(adapter);
     }
 
     @Override
