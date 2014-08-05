@@ -1,12 +1,15 @@
 package com.mickw.mickw;
 
 import android.os.Bundle;
-import android.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.mickw.mickw.R;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTabHost;
 
 import com.mickw.mickw.datadomain.OfferItem;
 import com.mickw.mickw.dummy.DummyContent;
@@ -29,6 +32,9 @@ public class OrderItemDetailFragment extends Fragment {
      */
     private OfferItem mItem;
 
+    private FragmentTabHost mTabHost;
+    private LayoutInflater layoutInflater;
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -39,25 +45,45 @@ public class OrderItemDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        layoutInflater = getLayoutInflater(savedInstanceState);
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            String uuid = getArguments().getString(ARG_ITEM_ID);
+            mItem = DummyContent.ITEM_MAP.get(uuid);
+            DummyContent.setCurrentSelectedItem(uuid);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_orderitem_detail, container, false);
+        View rootView =  layoutInflater.inflate(R.layout.fragment_orderitem_detail, container, false);
 
+        mTabHost = (FragmentTabHost)rootView;
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.orderitem_detail)).setText(mItem.getDescription());
+
+            //mTabHost = new FragmentTabHost(getActivity());
+
+            mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.offer_item_detail);
+            mTabHost.addTab(mTabHost.newTabSpec("details").setIndicator("Details"),
+                    OfferItemDetailDisplayDetails.class, null);
+
+            mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.offer_item_detail_content);
+            mTabHost.addTab(mTabHost.newTabSpec("smallPrint").setIndicator("Small Print"),
+                    OfferItemDetailsDisplaySmallPrint.class, null);
         }
 
         return rootView;
+    }
+
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mTabHost = null;
     }
 }

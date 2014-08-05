@@ -1,9 +1,20 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/orderitem_detail"
-    style="?android:attr/textAppearanceLarge"
+    android:id="@+id/offer_item_detail"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.mickw.mickw.OrderItemDetailFragment">
+<LinearLayout
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:textIsSelectable="true"
-    tools:context="com.mickw.mickw.OrderItemDetailFragment" />
+    android:layout_height="match_parent">
+    <TabWidget
+        android:id="@+id/offer_item_detail_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/offer_item_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+</android.support.v4.app.FragmentTabHost>

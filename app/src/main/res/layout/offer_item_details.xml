@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="60dp"
+    android:orientation="vertical">
+    >
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    >
+
+
+<RelativeLayout
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/offerDetailsView">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/how_to_use_title"
+        android:id="@+id/offerItemDetailOfferEnds"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/about_deal_title"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/offerItemDetailOfferEnds"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/offerItemDetailDescription"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/about_company"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/offerItemDetailDescription"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/offer_item_phone"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDetailPhone"
+        android:layout_below="@+id/textView5"
+        android:layout_toRightOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/email_title"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDetailEmail"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/textView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/website_title"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDetailWebsite"
+        android:layout_below="@+id/textView8"
+        android:layout_toRightOf="@+id/textView10" />
+
+</RelativeLayout>
+    </ScrollView>
+    </LinearLayout>

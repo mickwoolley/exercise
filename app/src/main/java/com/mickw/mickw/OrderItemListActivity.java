@@ -29,7 +29,7 @@ import com.mickw.mickw.dummy.DummyContent;
  * {@link OrderItemListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class OrderItemListActivity extends Activity
+public class OrderItemListActivity extends android.support.v4.app.FragmentActivity
         implements OrderItemListFragment.Callbacks {
 
     // OOPS naming silly - should have entered OfferItem when creating using AS, need to correct later
@@ -109,9 +109,10 @@ public class OrderItemListActivity extends Activity
             // fragment transaction.
             Bundle arguments = new Bundle();
             arguments.putString(OrderItemDetailFragment.ARG_ITEM_ID, id);
+            DummyContent.setCurrentSelectedItem(id);
             OrderItemDetailFragment fragment = new OrderItemDetailFragment();
             fragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
+            getSupportFragmentManager().beginTransaction()
                     .replace(R.id.orderitem_detail_container, fragment)
                     .commit();
 

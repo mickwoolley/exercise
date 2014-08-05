@@ -12,7 +12,17 @@
     <string name="offers_list_validity">until the end of time</string>
     <string name="offers_list_description">it\'s a thing</string>
     <string name="offers_list_title">the title</string>
-
+    <string name="about_deal_title">About the deal</string>
+    <string name="about_company">Who is offering this deal</string>
+    <string name="offer_item_phone">Phone:</string>
+    <string name="not_available">not available</string>
+    <string name="email_title">Email:</string>
+    <string name="website_title">Website:</string>
+    <string name="how_to_use_title">How to use</string>
+    <string name="tandc_title">Terms and conditions</string>
+    <string name="dates_title">Important dates</string>
+    <string name="redeem_on_title">Redeemable on:</string>
+    <string name="expire_title">Expires:</string>
 
 
 </resources>

@@ -3,6 +3,7 @@ package com.mickw.mickw;
 import android.app.Activity;
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +70,7 @@ public class OfferItemListAdapter extends ArrayAdapter<OfferItem> {
 
     @Override
     public boolean hasStableIds() {
-        return false;
+        return true;
     }
 
     @Override
@@ -90,20 +91,22 @@ public class OfferItemListAdapter extends ArrayAdapter<OfferItem> {
             viewHolder = (OffersListViewHolder) convertView.getTag();
         }
         OfferItem offerItem = offerItems.get(position);
+
         viewHolder.description.setText(offerItem.getDescription());
+//        viewHolder.description.setMovementMethod(new ScrollingMovementMethod());
         viewHolder.title.setText(offerItem.getTitle());
         if (offerItem.getAvailableCount() > 0 && offerItem.getAvailableCount() < 300) {
             viewHolder.remaining.setText("Only " + offerItem.getAvailableCount() + " left");
         }
         else {
-            viewHolder.remaining.setText(""); // todo hide?
+            viewHolder.remaining.setVisibility(View.GONE);
         }
         if (offerItem.getEndDate() != null) {
             SimpleDateFormat sdf = new SimpleDateFormat("d MMM yyy");
             viewHolder.validity.setText("Offer ends " + sdf.format(offerItem.getEndDate()));
         }
         else {
-            viewHolder.validity.setText("");
+            viewHolder.validity.setVisibility(View.GONE);
         }
         // probably lots of options for image loading, this is just one I found on web
         imageLoader.displayImage(offerItem.getImage(), viewHolder.image);

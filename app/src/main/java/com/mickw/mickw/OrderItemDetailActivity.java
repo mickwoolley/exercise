@@ -1,10 +1,13 @@
 package com.mickw.mickw;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 
+import android.support.v4.app.Fragment;
 import android.view.MenuItem;
+
 import com.mickw.mickw.R;
 
 /**
@@ -16,7 +19,7 @@ import com.mickw.mickw.R;
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link OrderItemDetailFragment}.
  */
-public class OrderItemDetailActivity extends Activity {
+public class OrderItemDetailActivity extends android.support.v4.app.FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,10 @@ public class OrderItemDetailActivity extends Activity {
                     getIntent().getStringExtra(OrderItemDetailFragment.ARG_ITEM_ID));
             OrderItemDetailFragment fragment = new OrderItemDetailFragment();
             fragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
-                    .add(R.id.orderitem_detail_container, fragment)
-                    .commit();
+            int containerId = R.id.orderitem_detail_container;
+            getSupportFragmentManager().beginTransaction().add(containerId, fragment).commit();
+//                    .add(R.id.orderitem_detail_container, fragment)
+  //                  .commit();
         }
     }
 

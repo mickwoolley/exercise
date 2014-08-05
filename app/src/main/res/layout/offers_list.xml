@@ -38,8 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
-        android:maxLines="5"
-        android:ellipsize="end"
+        android:maxLines="3"
         android:singleLine="false"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/offers_list_description" />

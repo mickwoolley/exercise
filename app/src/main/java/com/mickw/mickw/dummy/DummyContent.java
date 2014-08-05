@@ -16,8 +16,11 @@ import java.util.Map;
 public class DummyContent {
 
     /*
-    Nasty hacks going on, I should be getting this elsewhere I think, probably retrieve in the fragment?
+    Nasty hacks going on, I should be getting all of this elsewhere I think,
+    probably retrieve in the fragment?
      */
+
+    private static String currentSelectedItem;
 
     /**
      * An array of sample (dummy) items.
@@ -41,5 +44,13 @@ public class DummyContent {
     public static void init() {
         ITEMS.clear();
         ITEM_MAP.clear();
+    }
+
+    public static String getCurrentSelectedItem() {
+        return currentSelectedItem;
+    }
+
+    public static void setCurrentSelectedItem(String aCurrentSelectedItem) {
+        currentSelectedItem = aCurrentSelectedItem;
     }
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="60dp"
+    android:orientation="vertical">
+    >
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        >
+
+<RelativeLayout
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/smallPrintView">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/how_to_use_title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDetailHowToUse"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tandc_title"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/offerItemDetailHowToUse"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDetailTerms"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/dates_title"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/offerItemDetailTerms"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/redeem_on_title"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDescriptionEarliestRedemptionDate"
+        android:layout_below="@+id/textView5"
+        android:layout_toRightOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/expire_title"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/not_available"
+        android:id="@+id/offerItemDescriptionExpiryDate"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6" />
+</RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
